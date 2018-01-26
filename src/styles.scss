@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+@import '~@angular/material/theming';
+
+$main-primary: mat-palette($mat-red, 400, 200, 800);
+$main-accent:  mat-palette($mat-grey, 400, 200, 800);
+$main-theme: mat-light-theme($main-primary, $main-accent);
+@include angular-material-theme($main-theme);
