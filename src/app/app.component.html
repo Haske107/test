@@ -1,13 +1,13 @@
 <!-- BACKGROUND -->
-<div class="background">
+<div class="background" (click)="videoPlayer.play()">
   <!-- LOGO -->
   <button class="logo" ></button>
 
   <!-- CROP WRAPPER -->
   <div class="crop-wrapper">
     <!-- VIDEO -->
-    <video controls (click)="toggleVideo($event)" #videoPlayer class="snow">
-      <source src="../assets/First%20Cut_1.mp4" type="video/mp4" />
+    <video controls autoplay loop (click)="toggleVideo($event)" #videoPlayer class="snow">
+      <source src="https://drive.google.com/uc?export=download&id=1UU3jbEQQqM3_d8tLh7wE1c1T5-c21hnl" type="video/mp4" />
       Browser not supported
     </video>
   </div>
