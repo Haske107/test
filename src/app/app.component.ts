@@ -11,6 +11,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('videoPlayer') videoplayer: any;
 
   toggleVideo(event: any) {
+    console.log(this.videoplayer);
     if(!this.videoplayer.nativeElement.paused)  {
       this.videoplayer.nativeElement.pause();
     } else {
