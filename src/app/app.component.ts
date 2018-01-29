@@ -14,7 +14,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   opacity = 0;
   blurr = 100;
   scale = 0;
-
   @ViewChild('videoPlayer') videoplayer: any;
 
   show = true;
@@ -91,14 +90,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     if(this.show === true) {
       this.show = false;
       this.bottom = '-100%';
-      this.comingOpacity = '0';
+      this.comingOpacity = '1';
       this.videoplayer.nativeElement.muted = true;
       this.videoplayer.nativeElement.pause();
 
     } else{
       this.show = true;
       this.bottom = '100px';
-      this.comingOpacity = '1';
+      this.comingOpacity = '0';
       this.videoplayer.nativeElement.muted = false;
       this.videoplayer.nativeElement.play();
 
@@ -107,13 +106,10 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   toggleSquare()  {
     if(this.borderSquare === '#363636') {
-      this.comingOpacity = '0';
       this.infoOpacity = '1';
       this.borderSquare = 'whitesmoke';
     } else{
       this.borderSquare = '#363636';
-      this.comingOpacity = '0';
-      this.infoOpacity = '0';
 
     }
   }

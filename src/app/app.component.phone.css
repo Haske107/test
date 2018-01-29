@@ -57,14 +57,13 @@
     position: absolute;
     background-image: url('../assets/About.jpg');
     background-size: cover;
-    transition: .5s ease;
-
   }
   .coming {
     z-index: 8;
     top: 40vh;
     width: 90%;
     height: 80px;
+    opacity:0;
     left: 5%;
     position: absolute;
     background-image: url('../assets/Coming.jpg');
@@ -79,7 +78,7 @@
     border: none;
     opacity: 1;
     transition: .5s ease;
-    z-index: 10;
+    z-index: 11;
   }
 
     .info-button-red  {
