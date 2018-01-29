@@ -54,40 +54,30 @@
     z-index: 1;
   }
 
-  .info-button:focus ~ .contact {
+  .info-button-red:active ~ .contact {
     opacity: 1;
     transition: .3s ease;
     left: 35%;
   }
 
-  .logo:focus ~ .contact {
+
+  .logo:active ~ .contact {
     opacity: 1;
     transition: .3s ease;
     left: 35%;
     outline: none;
   }
 
-  .crop-wrapper {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top: calc(50% - 35vh);
-    width: 100%;
-    height: 65vh;
-    z-index: 1;
-    overflow: hidden;
-  }
-
-  .snow {
+  .video {
     width: 100%;
     min-height: 100%;
     position: absolute;
-    top: -100px;
-    left: 0;
+    top: 0;
+    left: 0e !important;
     border: none;
   }
 
-  .info-button {
+  .info-button-red {
     height: 40px;
     width: 40px;
     border-radius: 20px;
@@ -102,6 +92,23 @@
     cursor: pointer;
     border: 1px solid #363636;
   }
+
+
+  .info-button-green {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 29px;
+    right: 80px;
+    color: white;
+    outline: none;
+    z-index: 3;
+    background-image: url('../assets/Button2.jpg');
+    background-size: 200%;
+    cursor: pointer;
+    border: 1px solid #363636;
+  }
+
 
   .motto {
     height: 50px;

@@ -1,23 +1,43 @@
+
+
 <!-- BACKGROUND -->
 <div class="background" >
   <!-- LOGO -->
   <button class="logo" ></button>
-
-  <!-- CROP WRAPPER -->
-  <div class="crop-wrapper">
     <!-- VIDEO -->
-    <video controls autoplay loop (click)="toggleVideo($event)" #videoPlayer class="snow">
-      <source src="https://drive.google.com/uc?export=download&id=1UU3jbEQQqM3_d8tLh7wE1c1T5-c21hnl" type="video/mp4" />
+    <video  autoplay loop (click)="toggleVideo($event)" #videoPlayer class="video" [ngStyle]="{left: Left, bottom: bottom}">
+      <source class="source" src="https://drive.google.com/uc?export=download&id=1b7W8Kajw3OqxBWgK5sYPMRWkRfgugzlc" type="video/mp4" />
       Browser not supported
     </video>
-  </div>
+
+  <!-- ABOUT -->
+  <div class="info" [ngStyle]="{opacity: infoOpacity}"></div>
+  <div class="coming" [ngStyle]="{opacity: '1'}"></div>
+
   <!-- INFO BUTTON -->
-  <button  class="info-button"></button>
+  <button  class="info-button-red" (click)="toggleCircle()" [ngStyle]="{border: '1px solid ' +  borderCircle}"></button>
+  <button  class="info-button-green" (click)="toggleHider()" [ngStyle]="{border: '1px solid ' + borderSquare}"></button>
+  <svg class="info-button-triangle" (click)="toggleTriangle()" height="40" width="40" *ngIf="show">
+    <!-- defs -->
+    <defs>
+      <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image xlink:href="../assets/Button1.jpg" x="0" y="-40" width="100" height="100"></image>
+      </pattern>
+    </defs>
+    <polygon   #shape points="0,40  20,0 40,40"  stroke="#363636" fill="url(#img1)" stroke-width="1px" ></polygon>
+  </svg>
+  <svg class="info-button-triangle" (click)="toggleTriangle()" height="40" width="40" *ngIf="!show">
+    <!-- defs -->
+    <defs>
+      <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image xlink:href="../assets/Button1.jpg" x="0" y="-40" width="100" height="100"></image>
+      </pattern>
+    </defs>
+    <polygon   #shape points="0,40  20,0 40,40"  stroke="whitesmoke" fill="url(#img1)" stroke-width="1px" ></polygon>
+  </svg>
+
 
   <!-- CONTACT -->
-  <h3 class="contact">Contact@Trikon.xyz | Silverlake, Los Angeles</h3>
-  <h3 class="motto">Of the Future </h3>
-</div>
-
-
-
+  <h3 class="contact" [ngStyle]="{left: ContactLeft}"></h3>
+  <h3 class="motto" [ngStyle]="{left: MottoLeft}">Of the Future </h3>
+    </div>
